@@ -1,0 +1,143 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background-color:#0B1C2D;
+  color:#E5E7EB;
+  font-family:'Poppins', sans-serif;
+}
+
+/* HEADER */
+header{
+  position:fixed;
+  width:100%;
+  padding:20px 30px;
+  display:flex;
+  justify-content:space-between;
+  z-index:1000;
+}
+
+.menu-btn{font-size:26px;cursor:pointer;color:#00ffb3;}
+
+/* SIDEBAR */
+.hero img{
+  width:280px;
+  height:350px;          
+  object-fit:cover;
+  border-radius:15px;
+}
+
+nav{
+  position:fixed;
+  left:-260px;
+  top:0;
+  width:250px;
+  height:100%;
+  background:#111827;
+  padding:30px;
+  transition:.4s;
+  z-index:2000;
+}
+nav.active{left:0;}
+nav a{
+  display:block;
+  margin:15px 0;
+  color:#ccc;
+  text-decoration:none;
+}
+nav a:hover{color:#00ffb3;}
+.close{cursor:pointer;font-size:24px}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:block;
+  align-items:center;
+  justify-content:center;
+  padding:120px 10%;
+}
+.hero-text{
+  flex:1;
+}
+a{
+  text-decoration: none;
+  color: rgb(0, 247, 255);
+}
+.hero-box{
+  background:#112A45;
+  border-radius:20px;
+  padding:40px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  background:#112A45;
+  border-radius:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+.icons{
+  padding: none;
+  margin:3px;
+}
+
+.hero img{
+  max-width:300px;
+  border-radius:15px;
+}
+.hero h1 span,
+.hero h2 span{color:#00ffb3;}
+.icons i{
+  margin-right:15px;
+  font-size:20px;
+  cursor:pointer;
+}
+
+/* SECTION */
+section{padding:100px 10%;}
+.section-title{text-align:center;margin-bottom:40px;}
+
+.portfolio-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:#0f172a;
+  border-radius:15px;
+  padding:15px;
+  color: white;
+  
+}
+.card img{width:100%;border-radius:10px;}
+
+.resume-card{
+  background:#0f172a;
+  padding:20px;
+  margin-bottom:15px;
+  border-radius:10px;
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  background:#020617;
+  color:#777;
+}
+
+@media(max-width:900px){
+
+  .hero-box{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .hero img{
+    width:220px;
+    height:280px;
+  }
+}
+
