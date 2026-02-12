@@ -18,7 +18,7 @@ header{
   padding:20px 30px;
   display:flex;
   justify-content:space-between;
-  z-index:1000;
+ 
 }
 
 .menu-btn{font-size:26px;cursor:pointer;color:#00ffb3;}
@@ -61,7 +61,9 @@ nav a:hover{color:#00ffb3;}
   padding:120px 10%;
 }
 .hero-text{
-  flex:1;
+  display:block;
+  align-items:center;
+  justify-content:center;
 }
 a{
   text-decoration: none;
@@ -128,25 +130,17 @@ footer{
   color:#777;
 }
 
-@media(max-width:700px){
+@media(max-width:757px){
 
   .hero-box{
     flex-direction:column;
     text-align:center;
-     background:#112A45;
-  padding:60px;
-  display:block;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-   width:220px;
-    height:280px;
+    padding:60px;
+    display:block;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+  
   }
 
-  .hero img,.hero-text{
-    width:220px;
-    height:280px;
-    font-size: 11px;
-
-  }
 }
 
