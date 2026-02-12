@@ -86,7 +86,7 @@ a{
 }
 
 .hero img{
-  max-width:300px;
+  max-width:800px;
   border-radius:15px;
 }
 .hero h1 span,
@@ -140,7 +140,17 @@ footer{
     grid-template-columns:1fr 1fr;
     gap:40px;
   
-  }
-
 }
+}
+@media(max-width:447px){
 
+  .hero-box img{
+   align-items: center;
+    padding-right:100px;
+    align-items: center;
+   grid-template-columns:1fr 1fr;
+    gap:40px;
+      flex-direction:column;
+    text-align:center;
+}
+}
