@@ -154,3 +154,130 @@ footer{
     text-align:center;
 }
 }
+/* ===============================
+   MOVING GLOW BACKGROUND
+================================ */
+body::after{
+  content:"";
+  position:fixed;
+  inset:-30%;
+  background:
+    linear-gradient(
+      120deg,
+      transparent 35%,
+      rgba(0,234,255,.35),
+      rgba(0,255,157,.35),
+      transparent 65%
+    );
+  filter:blur(120px);
+  animation:glowMove 20s linear infinite;
+  z-index:-2;
+}
+
+@keyframes glowMove{
+  0%{
+    transform:translate(-20%,-20%);
+  }
+  50%{
+    transform:translate(20%,10%);
+  }
+  100%{
+    transform:translate(-20%,-20%);
+  }
+}
+
+
+
+/* HERO BOX */
+.hero-box{
+  position:relative;
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:50px;
+  padding:50px;
+ 
+}
+
+/* NEON FRAME */
+.hero-box::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  padding:2px;
+  border-radius:28px;
+  background:linear-gradient(
+    90deg,
+    #00eaff,
+    #00ff9d,
+    #00eaff
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+  animation:frameGlow 6s linear infinite;
+}
+
+@keyframes frameGlow{
+  0%{filter:drop-shadow(0 0 10px #00eaff);}
+  50%{filter:drop-shadow(0 0 18px #00ff9d);}
+  100%{filter:drop-shadow(0 0 10px #00eaff);}
+}
+
+/* FOTO */
+.hero img,.card img{
+  width:100%;
+  max-width:320px;
+  height:380px;
+  object-fit:cover;
+  border-radius:20px;
+  box-shadow:
+    0 0 20px rgba(0,234,255,.5),
+    0 0 45px rgba(0,255,157,.35);
+}
+
+/* TEXT */
+.hero-text small{
+  letter-spacing:3px;
+  color:#9ca3af;
+}
+
+.hero-text h1{
+  font-size:42px;
+  margin:10px 0;
+}
+
+.hero-text h1 span{
+  color:#00eaff;
+  text-shadow:0 0 12px rgba(0,234,255,.7);
+}
+
+.hero-text h2{
+  font-size:26px;
+}
+
+.hero-text h2 span{
+  color:#00ff9d;
+  text-shadow:0 0 12px rgba(0,255,157,.6);
+}
+
+.hero-text p{
+  margin-top:20px;
+  line-height:1.7;
+  color:#cbd5f5;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media(max-width:900px){
+  .hero-box{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .hero img,.card img{
+    margin:0 auto 30px;
+  }
+}
