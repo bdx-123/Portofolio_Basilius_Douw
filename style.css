@@ -142,18 +142,7 @@ footer{
   
 }
 }
-@media(max-width:447px){
 
-  .hero-box img{
-   align-items: center;
-    padding-right:100px;
-    align-items: center;
-   grid-template-columns:1fr 1fr;
-    gap:40px;
-      flex-direction:column;
-    text-align:center;
-}
-}
 /* ===============================
    MOVING GLOW BACKGROUND
 ================================ */
@@ -211,6 +200,7 @@ body::after{
     #00ff9d,
     #00eaff
   );
+
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
@@ -228,8 +218,7 @@ body::after{
 /* FOTO */
 .hero img,.card img{
   width:100%;
-  max-width:320px;
-  height:380px;
+ 
   object-fit:cover;
   border-radius:20px;
   box-shadow:
